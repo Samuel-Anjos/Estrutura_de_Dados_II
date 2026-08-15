@@ -12,6 +12,7 @@ O passos necessários eram:
 * Usar um laço pra receber os valores das medições;
 * Ao final liberar a memória com o uso d `free`.
 
+---
 
 Código da atividade:
 
