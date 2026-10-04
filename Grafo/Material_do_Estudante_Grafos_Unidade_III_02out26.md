@@ -72,6 +72,28 @@ Considere:
 -   Graphviz;
 -   Google Colab com Python e NetworkX.
 
+
+GRAFO: 
+
+![Grafo atividade 01](https://graphonline.top/tmp/saved/Gz/GzIlrTpxSZpLjQIx.svg)
+
+Número de vértices: 5
+
+Número de arestas: 6
+
+Ordem |V| = 5
+
+Tamanho |E| = 6
+
+O Grafo possui laço `(4,4)`
+
+GRAUS:
+- Vertice 1: Grau(3) | d(1): 3
+- Vertice 2: Grau(2) | d(2): 2
+- Vertice 3: Grau(2) | d(3): 2
+- Vertice 4: Grau(4) | d(4): 4
+- Vertice 5: Grau(1) | d(5): 1
+
 ------------------------------------------------------------------------
 
 ## 4. Atividade 2 - Incidência e adjacência
@@ -88,13 +110,17 @@ Utilize o grafo construído na Atividade 1.
 
 ### Registro
 
-  Vértice   Vértices adjacentes   Arestas incidentes
-  --------- --------------------- --------------------
-  1                               
-  2                               
-  3                               
-  4                               
-  5                               
+|Vértice | Vértices adjacentes | Arestas incidentes |
+| --- | --- | --- |
+| 1 | 2, 5 | {1, 2}, {1, 4}, {1, 5} |
+| 2 | 1, 3 | {1, 3}, {2, 3} |
+| 3 | 2, 4 | {2, 3}, {3, 4} |
+| 4 | 1, 3, 4 | {1, 4}, {3, 4}, {4, 4} |
+| 5 | 1 | {1, 5} |
+
+Porque os vértices 1 e 5 são vizinhos? Porque esses dois vertices estão conectados DIRETAMENTE por uma aresta, também chamado de vértices adjacentes.
+
+Dois vértices que não são adjacentes são 2 e 4, pois não possuem conexão direta um com o outro.
 
 ### Plataformas
 
@@ -124,9 +150,23 @@ Crie uma pequena rede de amizades entre essas pessoas.
 5.  Justifique a escolha.
 6.  Identifique quem possui maior grau no grafo criado.
 
+
+GRAFO:
+
+![Grafo atividade 3](https://graphonline.top/tmp/saved/MY/MYgwDxJFpMLpbJmg.svg)
+
+Nesse caso o ideal é ser um gráfico não digirido, pois se tratando de rede de amizades, não faz sentido ter direção, eles devem ser mutuamente amigos.
+
+Escolhi essa organização para ter como visualização vértices que não possuem conexão com todos os outros vértices, assim ficando claro uma representação de uma rede de amigos.
+
+Quem possui o maior grau no grado criado e o vértice **Marco**.
+
+
 ### Questão para reflexão
 
 **O que os vértices e as arestas representam nesse problema?**
+
+R: Os vértices representam pessoas e as arestas representam a conexão entre elas (amizade), já o grafo representa uma rede de amizades.
 
 ### Plataformas
 
@@ -156,6 +196,21 @@ mão única.
     -   seu grau de saída.
 6.  Explique por que um grafo não dirigido não representa adequadamente
     essa situação.
+
+
+GRAFO:
+
+![Grafo atividade 05](https://graphonline.top/tmp/saved/BS/BSYkquAOqIzdCFrk.svg)
+
+Conjunto V: A, B, C, D, E, F, G
+
+Conjunto E: {A, B}, {B, D}, {D, A}, {D, C}, {D, E}, {D, F}, {E, B}, {F, E}, {F, G}, {G, D}, {C, G}, {C, A}.
+
+VERTICE: D: 
+- Graus de entrada: 2 [B e G]
+- Grau de saída: 4 [A, C, E e F]
+
+Um grafo não dirigido não representaria adequadamente essa situação por se tratar de ruas de mão única, logo não faz sentido ter ligações bidirecionais (seria o mesmo que numa mesma pista única ter carro nas duas direções)
 
 ### Plataformas
 
