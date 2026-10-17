@@ -43,20 +43,24 @@ As amizades são:
 
 **Espaço para o seu desenho:** faça o grafo no caderno ou em uma ferramenta de desenho.
 
+GRAFO:
+
+![GRAFO REDE SOCIAL](https://graphonline.top/tmp/saved/aJ/aJaosDFYxOlRWAJg.svg)
+
 ## 5. Passo a passo: calcule o grau
 Conte quantas linhas chegam a cada círculo. Registre o resultado.
 
 | Usuário | Amigos diretos | Grau |
 |---|---|---:|
-| Ana | __________________ | ____ |
-| Bruno | __________________ | ____ |
-| Carla | __________________ | ____ |
-| Diego | __________________ | ____ |
-| Elisa | __________________ | ____ |
-| Felipe | __________________ | ____ |
+| Ana | Bruno, Carla | 2 |
+| Bruno | Ana, Carla, Diego | 3 |
+| Carla | Ana, Bruno, Elisa | 3 |
+| Diego | Bruno, Elisa, Felipe | 3 |
+| Elisa | Carla, Diego, Felipe | 3 |
+| Felipe | Diego, Elisa | 2 |
 
 **Pergunta 1:** quem tem mais conexões diretas?  
-Resposta: __________________________________________________
+Resposta: Bruno, Carla, Diego e Elisa tem mais conexões diretas, 3 cada um.
 
 ## 6. Passo a passo: calcule o número de amizades
 Some todos os graus. Como cada amizade conecta dois usuários, cada aresta é contada duas vezes.
@@ -64,9 +68,9 @@ Some todos os graus. Como cada amizade conecta dois usuários, cada aresta é co
 **Fórmula:**  
 `Número de arestas = soma dos graus ÷ 2`
 
-1. Soma dos graus: ______
-2. Divida por 2: ______ ÷ 2 = ______
-3. Quantas amizades existem no grafo? ______
+1. Soma dos graus: 16
+2. Divida por 2: 16 ÷ 2 = 8
+3. Quantas amizades existem no grafo? 8
 
 ## 7. Passo a passo: calcule a densidade
 A densidade compara as amizades existentes com o total de amizades possíveis.
@@ -81,14 +85,15 @@ Em que:
 - `V` = número de vértices.
 
 Substitua os valores:
-`D = 2 × ____ / (____ × (____ − 1))`
+`D = 2 × 8 / (6 × (6 − 1))`
 
-Resultado decimal: __________  
-Resultado percentual: __________ %
+Resultado decimal: 0,53
+
+Resultado percentual: 53%
 
 **Interprete:** a rede tem poucas ou muitas das conexões possíveis? Explique com suas palavras.
 
-________________________________________________________________
+A rede possui metade das conexões possíveis, com 16 das 30 conexões possíveis.
 
 ## 8. Passo a passo: represente o grafo em Python
 A lista de adjacência registra, para cada usuário, os nomes de seus amigos. Digite o código em Python (por exemplo, no Google Colab ou em outro ambiente disponível).
@@ -134,12 +139,12 @@ print(f"Densidade: {densidade:.2%}")
 Encontre um caminho de Ana até Felipe. Cada passagem por uma linha corresponde a uma aresta.
 
 Exemplo de registro:
-`Ana → __________ → __________ → Felipe`
+`Ana → Bruno → Diego → Felipe`
 
-- Quantas arestas há no caminho? ______
+- Quantas arestas há no caminho? 3
 - Você encontrou outro caminho com a mesma quantidade de arestas? Qual?
 
-________________________________________________________________
+Sim: `Ana → Carla → Elisa → Felipe`
 
 ## 10. Desafio em grupo
 Amplie a rede social:
@@ -161,3 +166,5 @@ Entregue:
 
 ## 12. Pergunta de reflexão
 Duas pessoas ainda não são amigas, mas têm três amigos em comum. Como essa informação poderia ser usada para sugerir uma nova conexão? Quais cuidados de privacidade devem ser considerados ao analisar redes sociais?
+
+Resposta: Essas amizades em comum podem ser usadas para recomendar pessoas que não se conhecem a começar uma conexão. Limitar os dados coletados referentes as conexões da rede social.
